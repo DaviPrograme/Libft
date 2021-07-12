@@ -17,7 +17,7 @@ OBJS_BONUS=$(BNS:.c=.o)
 all:	$(NAME)
 		
 $(NAME):
-	@gcc -Wall -Wextra -Werror -I $(HEADER) -c $(SRC)
+	@clang -Wall -Wextra -Werror -I $(HEADER) -c $(SRC)
 	@ar rcs $(NAME) $(OBJS)
 
 clean:
@@ -30,5 +30,5 @@ fclean:	clean
 re: fclean all
 
 bonus:
-	@gcc -Wall -Wextra -Werror -I $(HEADER) -c $(BNS)
+	@clang -Wall -Wextra -Werror -I $(HEADER) -c $(BNS)
 	@ar rcs $(NAME) $(OBJS_BONUS)
