@@ -19,7 +19,8 @@ static char	*alocador(int n, int cont)
 
 	vetor[0] = n;
 	vetor[1] = n;
-	if (!(ptr = (char *)ft_calloc(cont + 1, sizeof(char))))
+	ptr = (char *)ft_calloc(cont + 1, sizeof(char));
+	if (!ptr)
 		return (NULL);
 	if (n < 0)
 	{
@@ -30,7 +31,6 @@ static char	*alocador(int n, int cont)
 			ptr[cont] = 48 + (-vetor[1] + (vetor[0] * 10));
 			vetor[1] = vetor[1] / 10;
 		}
-		return (ptr);
 	}
 	while (--cont >= 0)
 	{
@@ -41,7 +41,7 @@ static char	*alocador(int n, int cont)
 	return (ptr);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		cont;
 	int		numb;

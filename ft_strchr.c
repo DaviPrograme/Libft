@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-const char		*ft_strchr(const char *frase, int cr)
+const char	*ft_strchr(const char *frase, int cr)
 {
 	const char	*ptr;
 	int			cont;

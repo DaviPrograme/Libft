@@ -32,7 +32,7 @@ static int	verificar_caracter(char const s1, char const *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		marcador[2];
 	int		cont;
@@ -54,6 +54,9 @@ char		*ft_strtrim(char const *s1, char const *set)
 		else
 			break ;
 	}
-	cont = marcador[0] > marcador[1] ? 0 : marcador[1] - marcador[0] + 1;
+	if (marcador[0] > marcador[1])
+		cont = 0;
+	else
+		cont = marcador[1] - marcador[0] + 1;
 	return (ft_substr(s1, marcador[0], cont));
 }

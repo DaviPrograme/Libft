@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *vetor)
 {
-	int cont;
+	int	cont;
 
 	cont = 0;
 	while (vetor[cont] != '\0')

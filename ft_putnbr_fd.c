@@ -86,7 +86,7 @@ static void	ft_positivos(int nb, int n)
 	}
 }
 
-void		ft_putnbr_fd(int nb, int n)
+void	ft_putnbr_fd(int nb, int n)
 {
 	if (nb == -2147483648)
 	{

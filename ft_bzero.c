@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void				ft_bzero(void *frase, size_t size)
+void	ft_bzero(void *frase, size_t size)
 {
 	unsigned char	*ptr;
 	unsigned int	cont;

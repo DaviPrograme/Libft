@@ -48,7 +48,7 @@ static size_t	cont_palavra(char const *s, char c)
 	return (palavras);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t		palavras;
 	char		**result;
@@ -58,7 +58,8 @@ char			**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	palavras = cont_palavra(s, c);
-	if (!(result = ft_calloc(palavras + 1, sizeof(char *))))
+	result = ft_calloc(palavras + 1, sizeof(char *));
+	if (!result)
 		return (0);
 	cont = -1;
 	palavras = 0;

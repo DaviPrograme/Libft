@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *orig, const char *base, size_t size)
 {
-	size_t cont;
+	size_t	cont;
 
 	cont = 0;
 	while (orig[cont] == base[cont] && (cont < size) && base[cont] && size)

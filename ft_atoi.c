@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static void				atribuir_valor(long long *vetor)
+static void	atribuir_valor(long long *vetor)
 {
 	vetor[0] = 1;
 	vetor[1] = 0;
 	vetor[2] = 0;
 }
 
-static int				verificador(unsigned long long resul, long long ver)
+static int	verificador(unsigned long long resul, long long ver)
 {
 	if (resul > 9223372036854775807 && (ver == 1))
 		return (-1);
@@ -27,7 +27,7 @@ static int				verificador(unsigned long long resul, long long ver)
 		return (resul * ver);
 }
 
-int						ft_atoi(const char *fr)
+int	ft_atoi(const char *fr)
 {
 	long long			con;
 	unsigned long long	resul;

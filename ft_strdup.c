@@ -22,7 +22,8 @@ char	*ft_strdup(const char *s1)
 	cont2 = 0;
 	while (s1[cont] != '\0')
 		++cont;
-	if (!(ptr1 = (char *)malloc((cont * sizeof(unsigned char) + 1))))
+	ptr1 = (char *)malloc((cont * sizeof(unsigned char) + 1));
+	if (!ptr1)
 		return (0);
 	while (cont2 <= (cont * sizeof(char)))
 	{
